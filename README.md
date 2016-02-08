@@ -2,5 +2,4 @@
 
 Normalizing a database is important in order to prevent duplicates (redundancy) and data integrity errors. For example, 
 let's say you are gathering customer information in a database (first name, last name, email, user id) and have a field called 'email' to store customer emails. A customer
-could give multiple emails and the email field would contain more than one value in the email column. If you were to instead add an additional 
-row to the database to place the second email
+could give multiple emails and the email field would contain more than one value in the email column. If you were to instead add an additional row to the database to place the second email address as a single value in its own email column then you would also be adding duplicate information along with it in the first name, last name, and user id fields. The solution would be to break off the problem column (email) and make a table of its own for it. The email table would contain for example these fields (email id, email, user id). Then you would be able to list the multiple email addresses in their own rows using the user id as the foreign key that references the user id in the other table with the first name and last name. 
